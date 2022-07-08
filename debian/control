@@ -1,0 +1,47 @@
+Source: sarndbox
+Section: education
+Priority: optional
+Maintainer: Michael Murphy <mmstick@pm.me>
+Build-Depends: debhelper (>= 9),
+    libvrui3-dev,
+    libkinect3-dev,
+    libasound2-dev,
+    libbluetooth-dev,
+    libdc1394-dev,
+    libfreetype-dev,
+    libgl1-mesa-dev,
+    libglu1-mesa-dev,
+    libjpeg-dev,
+    libopenal-dev,
+    libpng-dev,
+    libspeex-dev,
+    libssl-dev,
+    libtheora-dev,
+    libtiff-dev,
+    libudev-dev,
+    libusb-1.0-0-dev,
+    libv4l-dev,
+    mesa-common-dev,
+    zlib1g-dev,
+Standards-Version: 3.9.7
+Homepage: http://idav.ucdavis.edu/~okreylos/ResDev/Kinect/
+
+Package: arsandbox
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends},
+    vrui,
+    kinect,
+Conflicts: sarndbox
+Replaces: sarndbox
+Description: Augmented Reality Sandbox
+ FIXME.
+
+Package: sarndbox
+Architecture: amd64
+Depends: arsandbox
+Description: Transitional package
+ This package exists to transition users from the "sarndbox" to the "arsandbox"
+ package name.
+ .
+ This package can be safely removed after the installation is complete.
+

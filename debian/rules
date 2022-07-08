@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+DPKG_EXPORT_BUILDFLAGS = 1
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	make clean || true
+
+override_dh_auto_configure:
+
+override_dh_auto_build:
+	make VRUI_MAKEDIR=/usr/share/Vrui-8.0/make/ INSTALLDIR=/usr ETCINSTALLDIR=/etc/SARndbox-1.6
+
+override_dh_auto_test:
+
+override_dh_auto_install:
+	make VRUI_MAKEDIR=/usr/share/Vrui-8.0/make/ INSTALLDIR=debian/arsandbox/usr ETCINSTALLDIR=debian/arsandbox/etc/SARndbox-1.6 install
+

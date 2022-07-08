@@ -1,0 +1,34 @@
+sarndbox (2.8-1pop1) jammy; urgency=medium
+
+  * Repackage newer release
+
+ -- Michael Aaron Murphy <mmstick@pm.me>  Fri, 08 Jul 2022 16:46:30 +0200
+
+sarndbox (1.6-0ubuntu1~x3~ubuntu18.04) bionic; urgency=low
+
+  * Oops, forgot to rename sarndbox.postinst to arsandbox.postinst
+
+ -- Jason Gerard DeRose <jason@system76.com>  Tue, 24 May 2016 09:17:26 -0600
+
+sarndbox (1.6-0ubuntu1~x2) unstable; urgency=low
+
+  * debian/control: rename `sarndbox` binary package to `arsandbox`: user
+    testing of the tutorial consistently shows that folks are confused by the
+    name "sarndbox", think it's a typo, mistype it themselves, etc.; will
+    suggest to upstream that they consider the same renaming
+  * debian/control: provide transitional `sarndbox` package with Depends on
+    `arsandbox`
+  * debian/control: `arsandbox` now:
+    - Conflicts: sarndbox (<= 1.6-0ubuntu1~x1)
+    - Replaces: sarndbox (<= 1.6-0ubuntu1~x1)
+
+ -- Jason Gerard DeRose <jason@system76.com>  Mon, 23 May 2016 18:04:47 -0600
+
+sarndbox (1.6-0ubuntu1~x1) unstable; urgency=low
+
+  * Initial packaging of SARndbox 1.6 (sha1sum
+    543bf7374ecc204bbb34c09d2ee9f77c0b4ff40a)
+
+ -- Jason Gerard DeRose <jason@system76.com>  Mon, 23 May 2016 16:33:11 -0600
+
+

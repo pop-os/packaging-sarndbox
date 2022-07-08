@@ -1,0 +1,19 @@
+#!/bin/sh -e
+
+# To minimize chance of conflict with existing groups, we use "vrui-grp" for the
+# system group:
+VRUI_GROUP="vrui-grp"
+SARNDBOX_ETC="/etc/SARndbox-2.8/"
+
+case $1 in
+    configure)
+        if ! getent group $VRUI_GROUP > /dev/null; then
+            addgroup --system $VRUI_GROUP
+        fi
+        chgrp -R $VRUI_GROUP $SARNDBOX_ETC
+        chmod -R g+wX $SARNDBOX_ETC
+        ;;
+esac
+
+#DEBHELPER#
+

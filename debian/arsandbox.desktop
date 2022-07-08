@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Augmented Reality Sandbox
+Keywords=Kinect;Sandbox;ARSandbox;
+Exec=/usr/bin/SARndbox -uhm -fpv -evr -0.01
+Terminal=false
+Type=Application
