@@ -96,16 +96,16 @@ all: $(ALL)
 .PHONY: config
 config: Configure-End
 
-.PHONY: Configure-Begin
-Configure-Begin:
-	@cp Config.h Config.h.temp
-	@$(call CONFIG_SETSTRINGVAR,Config.h.temp,CONFIG_CONFIGDIR,$(ETCINSTALLDIR))
-	@$(call CONFIG_SETSTRINGVAR,Config.h.temp,CONFIG_SHADERDIR,$(SHAREINSTALLDIR)/Shaders)
-	@if ! diff Config.h.temp Config.h > /dev/null ; then cp Config.h.temp Config.h ; fi
-	@rm Config.h.temp
+# .PHONY: Configure-Begin
+# Configure-Begin:
+# 	@cp Config.h Config.h.temp
+# 	@$(call CONFIG_SETSTRINGVAR,Config.h.temp,CONFIG_CONFIGDIR,$(ETCINSTALLDIR))
+# 	@$(call CONFIG_SETSTRINGVAR,Config.h.temp,CONFIG_SHADERDIR,$(SHAREINSTALLDIR)/Shaders)
+# 	@if ! diff Config.h.temp Config.h > /dev/null ; then cp Config.h.temp Config.h ; fi
+# 	@rm Config.h.temp
 
 .PHONY: Configure-Install
-Configure-Install: Configure-Begin
+Configure-Install:
 	@echo "---- SARndbox installation configuration ----"
 	@echo "Root installation directory: $(INSTALLDIR)"
 	@echo "Configuration data directory: $(ETCINSTALLDIR)"
