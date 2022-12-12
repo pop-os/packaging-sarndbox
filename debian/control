@@ -31,14 +31,13 @@ Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends},
     vrui,
     kinect,
-Conflicts: sarndbox
 Replaces: sarndbox
 Description: Augmented Reality Sandbox
  FIXME.
 
 Package: sarndbox
 Architecture: amd64
-Depends: arsandbox
+Depends: arsandbox, ${misc:Depends}
 Description: Transitional package
  This package exists to transition users from the "sarndbox" to the "arsandbox"
  package name.
